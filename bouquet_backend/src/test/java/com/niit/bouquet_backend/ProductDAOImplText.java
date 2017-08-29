@@ -35,18 +35,19 @@ public class ProductDAOImplText {
 	@Test
 	public void createProductTestCase()
 	{
-		product.setId(2);
+		product.setId(3);
 		product.setProductName("Flowers");
 		product.setDescription("hi");
 		product.setPrice(100);
+		product.setQuantity(2);
 		boolean flag=productDAO.saveOrUpdate(product);
 		assertEquals("createProductTestCase", true, flag);
 	}
 	@Test
 	public void deleteProductTestCase()
 	{
-		product.setId(1);
-		boolean flag=productDAO.delete(1);
+		product.setId(0);
+		boolean flag=productDAO.delete(0);
 		assertEquals("deleteProductTestCase", true, flag);
 	}
 

@@ -35,7 +35,7 @@ public class CategoryDAOImplText {
 	@Test
 	public void createCategoryTestCase()
 	{
-		category.setId(1);
+		category.setId(4);
 		category.setCategoryName("Flowers");
 		category.setDescription("hi");
 		boolean flag=categoryDAO.saveOrUpdate(category);
@@ -44,8 +44,8 @@ public class CategoryDAOImplText {
 	@Test
 	public void deleteCategoryTestCase()
 	{
-		category.setId(1);
-		boolean flag=categoryDAO.delete(1);
+		category.setId(3);
+		boolean flag=categoryDAO.delete(3);
 		assertEquals("deleteCategoryTestCase", true, flag);
 	}
 

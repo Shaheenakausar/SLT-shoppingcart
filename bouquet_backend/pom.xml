@@ -12,16 +12,24 @@
 
 	<properties>
 		<org.springframework-version>4.3.3.RELEASE</org.springframework-version>
-		<dbh2.version>1.4.196</dbh2.version>
+		<dbh2.version>1.4.192</dbh2.version>
 	</properties>
 
-
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.1</version>
+			<version>1.7.7</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
@@ -46,7 +54,6 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-
 
 		<!-- Hibernate -->
 		<dependency>
@@ -112,7 +119,6 @@
 			<artifactId>spring-web</artifactId>
 			<version>4.3.3.RELEASE</version>
 		</dependency>
-
 
 	</dependencies>
 </project>
