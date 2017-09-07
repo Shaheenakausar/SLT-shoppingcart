@@ -40,6 +40,9 @@ public class ProductDAOImplText {
 		product.setDescription("hi");
 		product.setPrice(100);
 		product.setQuantity(2);
+		product.setCategory_id("lily flowers");
+		product.setSupplier_id("simmy");
+
 		boolean flag=productDAO.saveOrUpdate(product);
 		assertEquals("createProductTestCase", true, flag);
 	}

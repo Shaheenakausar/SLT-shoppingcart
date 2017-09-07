@@ -14,6 +14,9 @@ public class Product {
 	private double price;
 	private int quantity;
 	private String description;
+	private String category_id;
+
+	private String supplier_id;
 
 	public int getId() {
 		return id;
@@ -45,7 +48,7 @@ public class Product {
 
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}
+	} 
 
 	public String getDescription() {
 		return description;
@@ -55,4 +58,19 @@ public class Product {
 		this.description = description;
 	}
 
+	public String getCategory_id() {
+		return category_id;
+	}
+
+	public void setCategory_id(String category_id) {
+		this.category_id = category_id;
+	}
+
+	public String getSupplier_id() {
+		return supplier_id;
+	}
+
+	public void setSupplier_id(String supplier_id) {
+		this.supplier_id = supplier_id;
+	}
 }

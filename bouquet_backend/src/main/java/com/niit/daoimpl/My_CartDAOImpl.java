@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.niit.dao.My_CartDAO;
-import com.niit.model.Category;
 import com.niit.model.My_Cart;
 
 @Repository("my_CartDAO")

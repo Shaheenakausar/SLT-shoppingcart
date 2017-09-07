@@ -13,7 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.niit.dao.UserDAO;
 import com.niit.model.User;
-
+@SuppressWarnings("deprecation")
 @Repository("userDAO")
 @Transactional
 public class UserDAOImpl implements UserDAO
