@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +61,31 @@ public class ProductDAOImpl implements ProductDAO
 	  
     public Product get(int id)	{
     	return (Product)   sessionFactory.getCurrentSession().get(Product.class, id);
-    } 
+    }
+
+	public Product getProductById(String id) {
+		
+		return (Product) sessionFactory.getCurrentSession().get(Product.class, id);
+	}
+
+	public List<Product> getAllProductsByCategoryId(String categoryId) {
+		String hql = "from Product where category_Id=?";
+		Query query = sessionFactory.getCurrentSession().createQuery(hql);
+		query.setString(0, categoryId);
+		return query.list();
+
+
+	}
+
+	public List<Product> getAllProductsBySupplierId(String supplierId) {
+		return sessionFactory.getCurrentSession().createQuery("from Product where supplier_Id = ?").setString(0, supplierId).list();
+
+	}
+
+	public Product getProductByName(String name) {
+		// TODO Auto-generated method stub
+		return (Product) sessionFactory.getCurrentSession().createQuery("from Product where name = ?").setString(0, name).uniqueResult();
+
+	} 
     
 }
